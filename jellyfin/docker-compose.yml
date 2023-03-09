@@ -1,0 +1,14 @@
+version: '2.16'
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: 1000:1000
+    network_mode: 'bridge'
+    ports:
+      - 8096:8096
+    volumes:
+      - ~/Software/Docker/Jellyfin/config:/config
+      - ~/Software/Docker/Jellyfin/cache:/cache
+      - /Volumes/Extended/Media:/media:ro
+    restart: 'unless-stopped'
