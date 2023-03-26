@@ -10,5 +10,6 @@ services:
     volumes:
       - ~/Software/Docker/Jellyfin/config:/config
       - ~/Software/Docker/Jellyfin/cache:/cache
-      - /Volumes/Extended/Media:/media:ro
+      - /Volumes/Skydrive/Downloads/Movies:/movies:ro
+      - /Volumes/Skydrive/Downloads/Shows:/shows:ro
     restart: 'unless-stopped'
